@@ -1,0 +1,29 @@
+#profiles.yml 
+
+# profile name in syn with project.yml
+learn_dbt:
+  outputs:
+
+    dev:
+      type: snowflake
+      account: xe64398.ca-central-1.aws
+
+      # User/password auth
+      user: dbt_user
+      password: Dbt_user!4
+
+      role: dbt_role
+      database: analytics
+      warehouse: dbt_wh
+      schema: dbt
+      threads: 1
+      client_session_keep_alive: False
+
+      # optional
+      connect_retries: 0 # default 0
+      connect_timeout: 10 # default: 10
+      retry_on_database_errors: False # default: false
+      retry_all: False  # default: false
+      reuse_connections: False # default: false (available v1.4+)
+
+  target: dev
