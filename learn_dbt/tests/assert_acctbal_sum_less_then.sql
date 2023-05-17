@@ -1,7 +1,8 @@
 {{ config(materialized='test')}}
 
 
-select
+SELECT
     sum(c_acctbal) as sum_acctbal
 FROM {{ ref('playing_with_tests') }}
-having sum(c_acctbal) >= 100000000
+GROUP BY c_custkey
+HAVING sum(c_acctbal) >= 100000000
