@@ -2,3 +2,4 @@
 learn_dbt/target/
 learn_dbt/dbt_packages/
 learn_dbt/logs/
+profile.yml
