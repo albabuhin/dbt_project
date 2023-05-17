@@ -10,7 +10,7 @@ learn_dbt:
 
       # User/password auth
       user: dbt_user
-      password: Dbt_user!4
+      password: Dbt_user4!
 
       role: dbt_role
       database: analytics
